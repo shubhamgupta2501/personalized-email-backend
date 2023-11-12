@@ -12,14 +12,14 @@ load_dotenv()  # Load environment variables from .env
 
 app = FastAPI()
 
-# Add CORS middleware to enable communication with your React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://personalised-email.s3-website.us-east-2.amazonaws.com"],
+    allow_origins=["http://localhost:3000"],  # Correct origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 
@@ -36,7 +36,7 @@ async def generate_email(email_prompt: EmailPrompt):
         # Create a list of messages for the conversation
         messages = [
             SystemMessage(
-                content="You are an AI trained to assist with job application tasks."
+                content="You are an AI trained to assist with tasks to write emails according to the prompt"
             ),
             HumanMessage(
                 content=email_prompt.prompt  # The user's prompt
