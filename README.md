@@ -1,8 +1,4 @@
-Certainly, here's a raw code format of the README.md:
-
-markdownCopy code
-
-`# Personalized Email Outreach Backend
+# Personalized Email Outreach Backend
 
 Welcome to the backend of the "Personalized Email Outreach" project. This backend is built using FastAPI and serves as the communication layer between the user interface and the OpenAI GPT-3 model to generate personalized email content.
 
